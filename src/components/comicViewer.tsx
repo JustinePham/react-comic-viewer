@@ -1,7 +1,6 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 
-const ComicViewer: React.FC<{ comicData: any }> = ({ comicData }) => {
+const ComicViewer: React.FC<{ comicData: {chapters:{title:string, pages:{page:number, url:string}[] }[]} }> = ({ comicData }) => {
   const [currentChapterIndex, setCurrentChapterIndex] = useState(0);
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
 

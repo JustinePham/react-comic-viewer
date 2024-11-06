@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import ComicViewer from './components/comicViewer';
-import React from 'react';
 
 
 function App() {
