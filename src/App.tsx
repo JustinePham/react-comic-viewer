@@ -19,7 +19,7 @@ function App() {
 
   return (
     <Routes>
-       <Route path="/Home" element={<ComicViewer comicData={data} />}></Route>
+       <Route path="/" element={<ComicViewer comicData={data} />}></Route>
     </Routes>
     
   );
