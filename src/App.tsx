@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import ComicViewer from './components/comicViewer';
+import React from 'react';
+
 
 function App() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch('https://justinepham.github.io/comic-pages//comicData.json')
+    fetch('https://justinepham.github.io/react-comic-viewer/src/data/comicData.json')
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error('Error fetching data:', error));

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 
 const ComicViewer: React.FC<{ comicData: any }> = ({ comicData }) => {
@@ -28,13 +29,13 @@ const ComicViewer: React.FC<{ comicData: any }> = ({ comicData }) => {
   };
 
   // Change chapter and reset to the first page of that chapter
-  const changeChapter = (index) => {
+  const changeChapter = (index:number) => {
     setCurrentChapterIndex(index);
     setCurrentPageIndex(0);
   };
 
   // Directly select a page within the current chapter
-  const changePage = (index) => {
+  const changePage = (index: number) => {
     setCurrentPageIndex(index);
   };
 
@@ -48,10 +49,10 @@ const ComicViewer: React.FC<{ comicData: any }> = ({ comicData }) => {
       />
 
       <div style={{ marginTop: '20px' }}>
-        <button onClick={prevPage} disabled={currentPageIndex === 0}>
+        <button className="bg-cyan-400" onClick={prevPage} disabled={currentPageIndex === 0}>
           Previous
         </button>
-        <button
+        <button className="bg-cyan-400"
           onClick={nextPage}
           disabled={currentPageIndex === currentChapter.pages.length - 1}
         >
@@ -61,7 +62,7 @@ const ComicViewer: React.FC<{ comicData: any }> = ({ comicData }) => {
         <div style={{ marginTop: '10px' }}>
           <label>
             Select Chapter:
-            <select class="form-select"
+            <select className="form-select"
               value={currentChapterIndex}
               onChange={(e) => changeChapter(Number(e.target.value))}
             >
@@ -75,7 +76,7 @@ const ComicViewer: React.FC<{ comicData: any }> = ({ comicData }) => {
 
           <label style={{ marginLeft: '10px' }}>
             Select Page:
-            <select class="form-select"
+            <select className="form-select"
               value={currentPageIndex}
               onChange={(e) => changePage(Number(e.target.value))}
             >
