@@ -1,6 +1,8 @@
 import { createRoot } from 'react-dom/client'
 import { HashRouter as Router } from 'react-router-dom'
 import App from './App.tsx'
+import './index.css';  
+import './output.css';  
 
 createRoot(document.getElementById('root')!).render(
   <Router>
