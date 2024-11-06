@@ -61,7 +61,7 @@ const ComicViewer: React.FC<{ comicData: any }> = ({ comicData }) => {
         <div style={{ marginTop: '10px' }}>
           <label>
             Select Chapter:
-            <select
+            <select class="form-select"
               value={currentChapterIndex}
               onChange={(e) => changeChapter(Number(e.target.value))}
             >
@@ -75,7 +75,7 @@ const ComicViewer: React.FC<{ comicData: any }> = ({ comicData }) => {
 
           <label style={{ marginLeft: '10px' }}>
             Select Page:
-            <select
+            <select class="form-select"
               value={currentPageIndex}
               onChange={(e) => changePage(Number(e.target.value))}
             >

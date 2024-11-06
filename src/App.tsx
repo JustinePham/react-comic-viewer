@@ -17,7 +17,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Comic Page Viewer</h1>
       <ComicViewer comicData={data} />
     </div>
   );
