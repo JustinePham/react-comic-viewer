@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import ComicViewer from './components/comicViewer';
+import { Route, Routes } from 'react-router-dom';
 
 
 function App() {
@@ -17,10 +18,12 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <ComicViewer comicData={data} />
-    </div>
+    <Routes>
+       <Route path="/" element={<ComicViewer comicData={data} />}></Route>
+    </Routes>
+    
   );
 }
 
 export default App;
+
