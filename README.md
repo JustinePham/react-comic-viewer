@@ -1,4 +1,4 @@
-# Websitt
+# Website
 https://justinepham.github.io/react-comic-viewer/ 
 
 # React + TypeScript + Vite
