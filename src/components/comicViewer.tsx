@@ -90,7 +90,7 @@ const ComicViewer: React.FC<{ comicData: {chapters:{title:string, pages:{page:nu
 
   return (
     <div style={{ textAlign: 'center', maxWidth: '600px', margin: 'auto' }}>
-      <h2 class="p-2 text-xl font-bold uppercase ">{currentChapter.title}</h2>
+      <h2 className="p-2 text-xl font-bold uppercase ">{currentChapter.title}</h2>
       {resizedImageUrl ? (
         <img
           src={resizedImageUrl}
